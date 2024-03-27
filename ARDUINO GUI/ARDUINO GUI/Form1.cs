@@ -15,13 +15,13 @@ namespace ARDUINO_GUI
         public Form1()
         {
             InitializeComponent();
-            serialPort1.Close();
             serialPort1.Open();
         }
 
         private void led1_Click(object sender, EventArgs e)
         {
             serialPort1.Write("redLED");
+            led1.BackColor = Color.FromArgb(192, 255, 192);
         }
 
         private void led2_Click(object sender, EventArgs e)
