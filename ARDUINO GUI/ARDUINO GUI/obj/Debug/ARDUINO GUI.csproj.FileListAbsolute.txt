@@ -8,3 +8,13 @@ C:\Users\rjay\source\repos\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.
 C:\Users\rjay\source\repos\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.CoreCompileInputs.cache
 C:\Users\rjay\source\repos\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.exe
 C:\Users\rjay\source\repos\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.pdb
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\bin\Debug\ARDUINO GUI.exe.config
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\bin\Debug\ARDUINO GUI.exe
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\bin\Debug\ARDUINO GUI.pdb
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.AssemblyReference.cache
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO_GUI.Properties.Resources.resources
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.GenerateResource.cache
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.CoreCompileInputs.cache
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.exe
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.pdb
+C:\Users\Christopher\Desktop\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO_GUI.arduinoGUI.resources
