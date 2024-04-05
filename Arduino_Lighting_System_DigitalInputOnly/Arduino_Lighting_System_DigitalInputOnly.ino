@@ -32,19 +32,36 @@
   Servo servoMain;
   LiquidCrystal_I2C lcd(0x27,16,2);
 
-  int trigpin = 34; //Location of the pin
+  int trigpin = 12; //Location of the pin
   int echopin = 13; //Location of the pin
   int distance;
   float duration;
   float cm;
+  boolean gate = false;
 
 ///////////////////////  INITIALIZATION OF GSM MODULE   ////////////////////////////
   #include <SoftwareSerial.h>
   // Assigning Communication from Digital Input Pins
-  SoftwareSerial sim(14, 15); // tx, rx PINs
+  SoftwareSerial sim(18, 19); // tx, rx PINs
   String number = "+639351539638"; //-> change with your number
-void setup() {
 
+//////////////////INITIALIZATION OF FIRE DETECTION ALARM SYSTEM///////////
+  const int gas1 = A1;
+  const int gas2 = A2;
+
+  const int buzzer1 = 48;
+  const int buzzer2 = 49;
+  const int orled1 = 49;
+  const int redled1 = 40;
+  const int redled2 = 42;
+  const int orled2 = 47;
+  const int flame1 = 36;
+  const int flame2 = 38;
+  int Flame1 = 0;
+  int Flame2 = 0;
+
+  boolean flameSensor1 = false, flameSensor2 = false;
+void setup() {
   ///////////////////  LIGHTING CONTROL SYSTEM SETUP////////////////////////////////
     pinMode(LCS_ledBlue, OUTPUT);
     pinMode(LCS_ledRed, OUTPUT);
@@ -65,25 +82,35 @@ void setup() {
     pinMode(EQAS_redButton, INPUT);  
   
   ///////////////////////  GATE ACCESS SYSTEM SETUP  ////////////////////////////
-    servoMain.attach(12); //Location of the pin
+    servoMain.attach(34); //Location of the pin
     servoMain.write(0); //set initial position of servo
     pinMode(trigpin, OUTPUT);
     pinMode(echopin, INPUT);
     
-    lcd.begin(16,2); //Nilagyan ko parameter
+    //lcd.begin(16,2); //Nilagyan ko parameter
 
     // Turn on the blacklight and print a message.
     lcd.backlight();
     lcd.setCursor(0,0);
     lcd.print("  Gate Closed!");
+  ///////////////////////  INITIALIZATION OF FDAS   ////////////////////////////
+    pinMode(buzzer1, OUTPUT);
+    pinMode(orled1, OUTPUT);
+    pinMode(orled2, OUTPUT);
+    pinMode(redled1, OUTPUT);
+    pinMode(flame1, INPUT);
+    pinMode(flame2, INPUT);
+    pinMode(redled2, OUTPUT);
 
   ///////////////////////  INITIALIZATION OF GSM MODULE   ////////////////////////////
     //delay(7000); //delay for 7 seconds to make sure the modules get the signal
     sim.begin(9600);
     Serial.begin(9600);
     delay(5000);
+    pinMode(buzzer2, OUTPUT);
+    Serial.println("System is ReadY!");
 }
-
+  
 void loop() {
 
   ///////////////////////  ARDUINO GUI  ////////////////////////////
@@ -152,26 +179,26 @@ void loop() {
         if(EQAS_redIndicator == false){      // If the LCS_red button is clicked and the indicators are off, this will turn the alarm ON
           EQAS_redIndicator = true;
           EQAS_blueIndicator = false;    // turns off the other alarm if it is turned on
-          Serial.println("EARHTQUAKE ALARM ACTIVATED!!");
+          Serial.println("EARHTQUAKE ALARM ACTIVATED!!\n");
         }
         else if (EQAS_redIndicator == true){ // If the LCS_red button is clicked and the indicators are ON, this will turn the alarm OFF
           EQAS_redIndicator = false;
-          Serial.println("EARHTQUAKE ALARM DEACTIVATED!!");
+          Serial.println("EARHTQUAKE ALARM DEACTIVATED!!\n");
         }  
       }
       if(data == "Drill"){
         if(EQAS_blueIndicator == false){
           EQAS_redIndicator = false;
           EQAS_blueIndicator = true;
-          Serial.println("EARHTQUAKE DRILL ALARM ACTIVATED!!");
+          Serial.println("EARHTQUAKE DRILL ALARM ACTIVATED!!\n");
         }
         else if (EQAS_blueIndicator == true){
           EQAS_blueIndicator = false;
-          Serial.println("EARHTQUAKE DRILL ALARM DEACTIVATED!!");
+          Serial.println("EARHTQUAKE DRILL ALARM DEACTIVATED!!\n");
         }
       }
     }
-
+    
   ////////////////////////  LIGHTING SYSTEM CONTROLLER  ////////////////////////////////////////////
     // TURN ON BUTTON   -   Turns on all LED
     if(digitalRead(LCS_turnONButton) == HIGH){
@@ -293,14 +320,14 @@ void loop() {
       delay(500);
 
       // GSM MODULE ACTUALIZATION
-      sim.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-      delay(200);;
-      sim.println("AT+CMGS=\"" + number + "\"\r"); //Mobile phone number to send message
-      delay(200);
-      String SMS = "EARTHQUAKE DETECTED!! PLEASE EVACUATE IMMEDIATELY";
-      sim.println(SMS);
-      delay(100);
-      sim.println((char)26);// ASCII code of CTRL+Z
+      // sim.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+      // delay(200);;
+      // sim.println("AT+CMGS=\"" + number + "\"\r"); //Mobile phone number to send message
+      // delay(200);
+      // String SMS = "EARTHQUAKE DETECTED!! PLEASE EVACUATE IMMEDIATELY";
+      // sim.println(SMS);
+      // delay(100);
+      // sim.println((char)26);// ASCII code of CTRL+Z
     }
     else if (EQAS_redIndicator == false){
       digitalWrite(EQAS_ledRed, LOW);
@@ -317,23 +344,101 @@ void loop() {
       tone(EQAS_buzzer1, 300);
       delay(100);
 
-      // GSM MODULE ACTUALIZATION
-      sim.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-      delay(200);;
-      sim.println("AT+CMGS=\"" + number + "\"\r"); //Mobile phone number to send message
-      delay(200);
-      String SMS = "EARTHQUAKE DRILL SIMULATION!! Please Follow the procedure!! DROP, COVER AND HOLD!!!";
-      sim.println(SMS);
-      delay(100);
-      sim.println((char)26);// ASCII code of CTRL+Z
+      // // GSM MODULE ACTUALIZATION
+      // sim.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+      // delay(200);;
+      // sim.println("AT+CMGS=\"" + number + "\"\r"); //Mobile phone number to send message
+      // delay(200);
+      // String SMS = "EARTHQUAKE DRILL SIMULATION!! Please Follow the procedure!! DROP, COVER AND HOLD!!!";
+      // sim.println(SMS);
+      // delay(100);
+      // sim.println((char)26);// ASCII code of CTRL+Z
     }
     else if (EQAS_blueIndicator == false){
       digitalWrite(EQAS_ledBlue, LOW);
       noTone(EQAS_buzzer1);
     }
   
-  /*
+  
   //////////////////////// GATE ACCESS SYSTEM CONTROLLER  ///////////////////////////////////
+//   //////////////////////// FIRE DETECTION ALARM SYSTEM  ///////////////////////////////////
+
+Serial.println(digitalRead(flame1));
+  int Flame1 = digitalRead(flame1);
+  int Flame2 = digitalRead(flame2);
+
+  Serial.print("Flame: ");
+  Serial.println(Flame1);
+  Serial.println(Flame2);
+
+  int Gas1 = analogRead(gas1);
+  int Gas2 = analogRead(gas2);
+
+  Serial.print("Smoke: ");
+  Serial.println(Gas1);
+  Serial.println(Gas2);
+  delay(100);
+
+  //Gas 1 
+  if (gas1 > 400) {
+    Serial.println("  |  Smoke: Detected!");
+    digitalWrite(buzzer2, HIGH);
+   digitalWrite(orled1, HIGH);    
+  } else {
+    Serial.println("  |  Smoke: -");
+    digitalWrite(buzzer2, LOW);
+       digitalWrite(orled1, LOW);
+    while (gas1 >= 180) {
+      Gas1 = analogRead(gas1);
+      delay(100);
+    }
+  }
+
+
+  //Gas 2 
+  if (gas2 > 400) {
+    Serial.println("  |  Smoke: Detected!");
+    digitalWrite(buzzer1, HIGH);
+   digitalWrite(orled2, HIGH);    
+  } else {
+    Serial.println("  |  Smoke: -");
+    digitalWrite(buzzer1, LOW);
+       digitalWrite(orled2, LOW);
+    while (gas2 > 180) {
+      Gas2 = analogRead(gas2);
+      delay(100);
+    }
+  }
+
+/////////////////////////////FIRE//////////DECLARATION
+if (digitalRead(flame1) == 0)
+{
+   Serial.println("  |  Flame: Detected!");
+  digitalWrite(redled1, HIGH);
+  digitalWrite(buzzer1, HIGH);
+}
+else
+{
+  Serial.println("  |  Flame: -");
+  digitalWrite(redled1, LOW);
+  digitalWrite(buzzer1, LOW);
+}
+
+/////////////////////////////FIRE//////////DECLARATION
+if (digitalRead(flame2) == 0)
+{
+   Serial.println("  |  Flame: Detected!");
+  digitalWrite(redled2, HIGH);
+  digitalWrite(buzzer2, HIGH);
+}
+else
+{
+  Serial.println("  |  Flame: -");
+  digitalWrite(redled2, LOW);
+  digitalWrite(buzzer2, LOW);
+}
+
+
     digitalWrite(trigpin, LOW);   //Clears the trigpin
     delay(2);
     digitalWrite(trigpin, HIGH); //Sets the trigpin high for 10 micro seconds
@@ -344,20 +449,26 @@ void loop() {
     distance = cm;
 
 
-    if (distance<20){
-      //lcd.setCursor(0,0);
+    
+      if (distance<20){
+         //lcd.setCursor(0,0);
       //lcd.print("  Gate Opened!");
       servoMain.write(90);
-      delay(1000);
-    }
-    else{
+      Serial.println("Gate Open\n");
+      gate = true;
+      //delay(1000);
+      delay(200);
+      }
+      else{
       //lcd.setCursor(0,0);
       servoMain.write(0);
+      Serial.println("Gate Close\n");
+      gate = false;
       //lcd.print("  Gate Closed!");
       delay(500);
 
-    }*/
+      }
+    
 
     
-delay(200);
 }
