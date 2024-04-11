@@ -1,8 +1,5 @@
 void GSMinitialization(){
-  #include <SoftwareSerial.h>
-  SoftwareSerial myGSM(18,19);
-  String numbers[] = {"+639926908900","+639351539638"}; // List of recipient numbers  //Sir Joel's number: +639772036585     //,"+639686827682","+639933607232","+639087521252","+639098391709"
-  myGSM.begin(9600);
+  
 }
 
 

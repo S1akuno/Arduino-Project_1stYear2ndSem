@@ -1,8 +1,29 @@
+///////////////////////  INITIALIZATION OF LIGHTING CONTROL SYSTEM  /////////////////////////////
+  // Assigning Digital Input PIN numbers
+  #define LCS_turnONButton 2
+  #define LCS_turnOFFButton 3
+  #define LCS_whiteButton 4
+  #define LCS_yellowButton 5
+  #define LCS_blueButton 6
+  #define LCS_redButton 7
+  #define LCS_ledWhite 8
+  #define LCS_ledYellow 9
+  #define LCS_ledBlue 10
+  #define LCS_ledRed 11
+
+
+
 void ArduinoGUIloop(){
 ////////////////////////  ARDUINO GUI  ////////////////////////////////////////////////////////
   if (Serial.available()){
     String data = Serial.readString();
 
+
+
+
+    if(Serial.read() == "p"){
+      txtMessage("hello");
+    }
   ///////////////////  LIGHTING SYSTEM  ////////////////////////////////
     if(data == "redLED"){
       if(LCS_red == false){

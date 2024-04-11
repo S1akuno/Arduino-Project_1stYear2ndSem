@@ -1,21 +1,3 @@
-void LCSinitialization(){
-  ///////////////////////  INITIALIZATION OF LIGHTING CONTROL SYSTEM  /////////////////////////////
-  // Assigning Digital Input PIN numbers
-  #define LCS_turnONButton 2
-  #define LCS_turnOFFButton 3
-  #define LCS_whiteButton 4
-  #define LCS_yellowButton 5
-  #define LCS_blueButton 6
-  #define LCS_redButton 7
-  #define LCS_ledWhite 8
-  #define LCS_ledYellow 9
-  #define LCS_ledBlue 10
-  #define LCS_ledRed 11
-
-  // This will indicate when the LED is turned ON or OFF  -   FALSE means OFF
-  boolean LCS_blue = false, LCS_red = false, LCS_yellow = false, LCS_white = false;
-
-}
 void LCSsetup(){
   ///////////////////////  LIGHTING CONTROL SYSTEM SETUP  ///////////////////////////////////////
   pinMode(LCS_ledBlue, OUTPUT);
@@ -99,7 +81,7 @@ void LCSloop(){
       lcd.setCursor(7,1);
       lcd.print("ON");
       
-      txtMessage("Red LED turned ON");  
+      //txtMessage("Red LED turned ON");  
     }
     else {
       LCS_red = false;
@@ -110,7 +92,7 @@ void LCSloop(){
       lcd.setCursor(7,1);
       lcd.print("OFF");
 
-      txtMessage("Red LED turned OFF");
+      //txtMessage("Red LED turned OFF");
     }
   }
   // Blue Button    -   Turns on Blue LED

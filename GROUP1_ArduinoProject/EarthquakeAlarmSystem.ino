@@ -1,4 +1,4 @@
-void EASinitialization(){
+
 ///////////////////////  INITIALIZATION OF EARTHQUAKE ALARM SYSTEM   ////////////////////////////
    // Assigning Digital Input PIN numbers
   #define EQAS_buzzer1 22
@@ -8,9 +8,8 @@ void EASinitialization(){
   #define EQAS_redButton 30
   #define EQAS_buzzer2 32
 
-  // This will indicate if the red button or blue button is pressed
-  boolean EQAS_redIndicator = false, EQAS_blueIndicator = false;
-}
+ 
+
 void EASsetup(){
   ///////////////////////  EARTHQUAKE ALARM SYSTEM SETUP  ///////////////////////////////////////
     pinMode(EQAS_buzzer1, OUTPUT);

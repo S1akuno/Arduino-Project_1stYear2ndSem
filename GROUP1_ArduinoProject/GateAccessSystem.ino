@@ -1,19 +1,5 @@
 void GASinitialization(){
-  ///////////////////////  INITIALIZATION OF GATE ACCESS SYSTEM   /////////////////////////////////
-
-  #include <Servo.h>
-  Servo servoMain;
-
-
-  int trigpin = 12; //Location of the pin
-  int echopin = 13; //Location of the pin
-  int distance;
-  float duration;
-  float cm;
-  boolean gate = false; //used in detection for GUI
-  boolean gateMessage = false;
-  bool gateOpen = false; // Flag to keep track of gate status
-
+  
 }
 void GASsetup(){
   ///////////////////////  GATE ACCESS SYSTEM SETUP  ////////////////////////////////////////////
