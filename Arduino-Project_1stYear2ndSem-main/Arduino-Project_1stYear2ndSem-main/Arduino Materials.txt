@@ -1,0 +1,112 @@
+Project's Balance(yung nasa sa akin):	1821		-	Total Balance Before Material Buying
+					1086		-	February 25, 2024 (Buy From Deeco)
+					1071		-	March 7, 2024 (Cash In)
+					883		-	March 7, 2024 (Buy From Deeco)
+					1		-	March 7, 2024 (Buy From Shopee)
+					151		-	March 15, 2024 (Send ni Vallez)
+			
+			
+
+
+------------------------------------ MATERIALS ------------------------------------------
+=> 02/25/2024 (DEECO, QUIAPO)
+Arduino R3 x1				-	500
+Active Buzzer x1			-	60
+220 Ohms Resistor x10			-	4.5
+1k Ohms Resistor x10			-	4.5
+MQ2 Gas/ Smoke Detector x1		-	100
+HCSR04 UltraSonic Sensor x1		-	67
+					----------------
+					Total:  735						(736 Dapat[Yung butal na piso bawas sa sponsored discount])
+
+=> 03/07/2024 (DEECO)
+LED(Orange) x 20			-	48
+LED(White) x 10				-	20
+Piezo Buzzer x8				-	120
+					----------------
+					Total:  188
+
+=> 03/07/2024 (Binili kay Chris from Shopee) Para may hahabulin incase may sira :<<
+Flame Sensor x1				-	50	
+LCD 16X2 x1				-	149
+Tactile Push Button(cap included) x25	-	150	
+Wireless GSM SIM800L x1			-	355	
+MQ2 Gas/ Smoke Detector x1		-	75	
+LED(Blue) x10				-	25	
+LED(Green) x10				-	25	
+LED(Red) x10				-	25	
+LED(Yellow) x20				-	28	
+					------------------
+					Total:  882
+--------------------------------------------------------------------------------------
+
+
+--------------------------- Other Expenses -----------------------------------------
+
+Pamasahe(02/25/2024)			-	85	(Reflected to Sponsor)
+Pamasahe(03/07/2024)			-	26	(Reflected to Sponsor)
+Cash In to Chris(03/07/2024)		-	15	(Reflected to Budget)
+-------------------------------------------------------------------------------------
+
+
+------ Tristan's Materials (Included in Project's Material) ------ (Before February 25, 2024)
+9v Battery x1
+Tactile Push Button(cap included) x6	-
+Resistor Bands(1k Ohms) x27
+------------------------------------------------------------------
+
+
+
+----------------------- Planned to Buy ----------------------------		Updated: March 7, 2024
+Piezo/ Passive Buzzer x7		-
+Real Time Clock Module DS3231		-	125(Estimated Price)
+------------------------------------------------------------------
+
+
+
+
+
+
+-------- Christopher's Materials -----------------------
+220 Ohms Resistor x90			-	40.5	(Naka'y Lance)March 7,2024
+1k Ohms Resistor x90			-	40.5	(Naka'y Lance)03/07/2024
+9v Battery Clip w/ DC Plug x5		-	75	-	Shopee
+9v Battery x1				-	48	-	Shopee
+Mega 2560 R3 Board x1 			-	1149	-	Shopee
+Battery Snap 				-	43
+Breadboard (400 Tie Points - Half) x1	-	100
+Breadboard (400 Tie Points - Half) x1	-	49	-	Shopee
+Breadboard (830 Tie Points - Full) x1	-	65	-	Shopee
+Flame Sensor x1 			- 	49	-	Shopee
+Solderless Jumperwire kit x840 wires	- 	312	-	Shopee	(0.37/Wire)
+Jumper Wire (Male to Male) x40		-	49	-	Shopee
+Jumper Wire (Male to Male) x30		-	50
+Jumper Wire (Male to Female) x40	-	49	-	Shopee
+Jumper Wire (Male to Male) x40		-	49	-	Shopee
+
+
+
+---------- MATERIALS NA BINIGAY NUNG MARCH 15,2024 --------------------------
+FULL BREADBOARD w/ black something x2
+FULL Breadboard x1
+Integrated Circuit x2
+
+---------- MATERIALS NA BINIGAY NUNG MARCH 15,2024 / MA LYN --------------------------
+Jumper Wire (Male to Male) x12
+LED X21
+PUSH BUTTON X3
+RESISTOR X27
+
+---------- MATERIALS NA BINIGAY NUNG MARCH 22,2024 / MA LYN --------------------------
+Servo Motor x2
+------------------------------------------------------------------------
+Shopee Discounted Price	Sponsor		-	405		(March 6)
+					-	404		(March 7) - Bawas yung butal na piso
+					-	319		(March 7) - Bawas pamasahe nung 2/25
+					-	293		(March 7) - Bawasa pamasahe nung 3/7
+
+
+
+
+
+

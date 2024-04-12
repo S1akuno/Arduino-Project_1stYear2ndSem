@@ -245,45 +245,29 @@ namespace ARDUINO_GUI
                     GAS_closeButton.BackColor = Color.FromArgb(225, 225, 22);
 
                     break;
-                case "FAS1":
-                    FASDS_fireButton1.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_fireButton1.BackColor = Color.FromArgb(225, 225, 22);
-
+                case "fire1":
+                   FASDS_fireButton1.BackColor = Color.FromArgb(225, 225, 225);
                     break;
-                case "FAS2":
+                case "fire2":
                     FASDS_fireButton2.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_fireButton2.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "FAS3":
+                case "fire3":
                     FASDS_fireButton3.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_fireButton3.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "FAS4":
+                case "fire4":
                     FASDS_fireButton4.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_fireButton4.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "SAS1":
+                case "smoke1":
                     FASDS_smokeButton1.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_smokeButton1.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "SAS2":
+                case "smoke2":
                     FASDS_smokeButton2.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_smokeButton2.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "SAS3":
+                case "smoke3":
                     FASDS_smokeButton3.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_smokeButton3.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
-                case "SAS4":
+                case "smoke4":
                     FASDS_smokeButton4.BackColor = Color.FromArgb(225, 225, 225);
-                    FASDS_smokeButton4.BackColor = Color.FromArgb(225, 225, 22);
-
                     break;
             }
 

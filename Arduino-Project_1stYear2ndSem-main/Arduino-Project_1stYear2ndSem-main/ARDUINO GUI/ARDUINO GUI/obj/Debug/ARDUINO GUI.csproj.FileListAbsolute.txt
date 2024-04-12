@@ -38,6 +38,6 @@ C:\Users\Christopher\Documents\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csp
 C:\Users\Christopher\Documents\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.CoreCompileInputs.cache
 C:\Users\Christopher\Documents\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.exe
 C:\Users\Christopher\Documents\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.pdb
-C:\Users\QC University\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.AssemblyReference.cache
-C:\Users\QC University\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.exe
-C:\Users\QC University\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.pdb
+C:\Users\QCU\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.csproj.AssemblyReference.cache
+C:\Users\QCU\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.exe
+C:\Users\QCU\Desktop\Arduino-Project_1stYear2ndSem-main\ARDUINO GUI\ARDUINO GUI\obj\Debug\ARDUINO GUI.pdb
